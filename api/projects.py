@@ -11,7 +11,7 @@ import uuid
 from http.server import BaseHTTPRequestHandler
 from urllib.parse import parse_qs, urlparse
 
-import psycopg2
+import psycopg
 
 
 def get_conn():
@@ -19,7 +19,7 @@ def get_conn():
     database_url = os.environ.get("DATABASE_URL") or os.environ.get("POSTGRES_URL")
     if not database_url:
         raise Exception("Missing DATABASE_URL or POSTGRES_URL env var")
-    return psycopg2.connect(database_url, sslmode="require")
+    return psycopg.connect(database_url)
 
 
 def ensure_table(conn):
@@ -103,7 +103,6 @@ class handler(BaseHTTPRequestHandler):
                 self._send_json(404, {"error": "Project not found"})
                 return
 
-            # row[0] is already a dict if JSONB, or a string if TEXT
             state = row[0] if isinstance(row[0], dict) else json.loads(row[0])
             self._send_json(200, {"state": state})
         except Exception as e:
