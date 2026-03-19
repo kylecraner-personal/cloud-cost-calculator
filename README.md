@@ -1,7 +1,7 @@
 
   # Cost Calculator App
 
-  This is a code bundle for Cost Calculator App. 
+  This is a code bundle for Cost Calculator App. It helps calculate costs!
 
   ## Running the code
 
