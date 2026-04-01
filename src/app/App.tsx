@@ -236,28 +236,23 @@ const initialCloudStations = [
   { name: "g5.4xlarge", costPerHour: 1.624, provider: "AWS" },
   // Azure
   {
-    name: "Standard_NC6s_v3",
-    costPerHour: 1.14,
+    name: "NV6ads A10 V5 - 6 vCPUs, 55GB RAM, 4GB VRAM",
+    costPerHour: 0.73,
     provider: "Azure",
   },
   {
-    name: "Standard_NC12s_v3",
-    costPerHour: 2.28,
+    name: "NV12ads A10 V5 - 12 vCPUs, 110GB RAM, 8GB VRAM",
+    costPerHour: 1.46,
     provider: "Azure",
   },
   {
-    name: "Standard_NC24s_v3",
-    costPerHour: 4.56,
+    name: "NV18ads A10 V5 - 18 vCPUs, 220GB RAM, 12GB VRAM",
+    costPerHour: 2.43,
     provider: "Azure",
   },
   {
-    name: "Standard_NV6",
-    costPerHour: 1.14,
-    provider: "Azure",
-  },
-  {
-    name: "Standard_NV12",
-    costPerHour: 2.28,
+    name: "NV36ads A10 V5 - 36 vCPUs, 440GB RAM, 24GB VRAM",
+    costPerHour: 4.86,
     provider: "Azure",
   },
   // GCP
@@ -291,32 +286,32 @@ const initialCloudStations = [
 const initialPhysicalStations = [
   {
     id: "1",
-    name: "CG-STATION-01",
-    specs: "RTX 4090, 64GB RAM, i9-13900K",
+    name: "SCORPIO",
+    specs: "RTX 3080Ti, 128GB RAM, AMD 1950x 16 Core",
     available: true,
   },
   {
     id: "2",
-    name: "CG-STATION-02",
-    specs: "RTX 4080, 64GB RAM, i9-13900K",
+    name: "ARIES",
+    specs: "2x 2080Ti, 64GB RAM, i9 7980xe 18 core",
     available: true,
   },
   {
     id: "3",
-    name: "CG-STATION-03",
-    specs: "RTX 4080, 32GB RAM, i7-13700K",
+    name: "TAURUS",
+    specs: "RTX 4090, 64GB RAM, i9 14900KF 24 Core",
     available: true,
   },
   {
     id: "4",
-    name: "CG-STATION-04",
-    specs: "RTX 3090, 64GB RAM, i9-12900K",
+    name: "LIBRA",
+    specs: "RTX 4090, 64GB RAM, i9 14900KF 24 Core",
     available: true,
   },
   {
     id: "5",
-    name: "CG-STATION-05",
-    specs: "RTX 3080, 32GB RAM, i7-12700K",
+    name: "ORION",
+    specs: "RTX 5070, 128GB RAM, i9 14900KF 24 Core",
     available: true,
   },
   {
